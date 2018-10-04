@@ -153,7 +153,7 @@ class DBHelper {
      */
     static imageUrlForRestaurant(restaurant) {
         //return (`/img/${restaurant.photograph}`);
-        return (`https://mzlovelyj.github.io/frontend-nanodegree-restaurant-site/img/${restaurant.photograph}`);
+        return (`https://mzlovelyj.github.io/frontend-nanodegree-restaurant-site/img//img/${restaurant.photograph}`);
 
     }
 
