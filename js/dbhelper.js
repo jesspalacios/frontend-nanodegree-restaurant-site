@@ -8,8 +8,9 @@ class DBHelper {
      * Change this to restaurants.json file location on your server.
      */
     static get DATABASE_URL() {
-        const port = 8012; // Change this to your server port
-        return `http://localhost:${port}/data/restaurants.json`;
+        /*const port = 8012 // Change this to your server port
+        return `http://localhost:${port}/data/restaurants.json`;*/
+        return `https://mzlovelyj.github.io/frontend-nanodegree-restaurant-site/data/restaurants.json`;
     }
 
     /**
@@ -17,6 +18,7 @@ class DBHelper {
      */
     static fetchRestaurants(callback) {
         let xhr = new XMLHttpRequest();
+        console.log();
         xhr.open('GET', DBHelper.DATABASE_URL);
         xhr.onload = () => {
             if (xhr.status === 200) { // Got a success response from server!
@@ -91,7 +93,7 @@ class DBHelper {
             if (error) {
                 callback(error, null);
             } else {
-                let results = restaurants;
+                let results = restaurants
                 if (cuisine != 'all') { // filter by cuisine
                     results = results.filter(r => r.cuisine_type == cuisine);
                 }
@@ -113,9 +115,9 @@ class DBHelper {
                 callback(error, null);
             } else {
                 // Get all neighborhoods from all restaurants
-                const neighborhoods = restaurants.map((v, i) => restaurants[i].neighborhood);
-                // Remove duplicates from neighborhoods
-                const uniqueNeighborhoods = neighborhoods.filter((v, i) => neighborhoods.indexOf(v) == i);
+                const neighborhoods = restaurants.map((v, i) => restaurants[i].neighborhood)
+                    // Remove duplicates from neighborhoods
+                const uniqueNeighborhoods = neighborhoods.filter((v, i) => neighborhoods.indexOf(v) == i)
                 callback(null, uniqueNeighborhoods);
             }
         });
@@ -131,9 +133,9 @@ class DBHelper {
                 callback(error, null);
             } else {
                 // Get all cuisines from all restaurants
-                const cuisines = restaurants.map((v, i) => restaurants[i].cuisine_type);
-                // Remove duplicates from cuisines
-                const uniqueCuisines = cuisines.filter((v, i) => cuisines.indexOf(v) == i);
+                const cuisines = restaurants.map((v, i) => restaurants[i].cuisine_type)
+                    // Remove duplicates from cuisines
+                const uniqueCuisines = cuisines.filter((v, i) => cuisines.indexOf(v) == i)
                 callback(null, uniqueCuisines);
             }
         });
@@ -150,7 +152,9 @@ class DBHelper {
      * Restaurant image URL.
      */
     static imageUrlForRestaurant(restaurant) {
-        return (`/img/${restaurant.photograph}`);
+        //return (`/img/${restaurant.photograph}`);
+        return (`https://mzlovelyj.github.io/frontend-nanodegree-restaurant-site/${restaurant.photograph}`);
+
     }
 
     /**
@@ -162,7 +166,7 @@ class DBHelper {
                 title: restaurant.name,
                 alt: restaurant.name,
                 url: DBHelper.urlForRestaurant(restaurant)
-            });
+            })
             marker.addTo(newMap);
             return marker;
         }
