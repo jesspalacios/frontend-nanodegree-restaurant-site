@@ -199,11 +199,13 @@ nav h1 a {
     border-radius: 5px;
     font-family: Quicksand, Arial, sans-serif;
     font-size: 11pt;
+    height: 35px;
     letter-spacing: 0;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 7px;
     padding: 0 10px;
-    display: inline;
+    width: calc( (100% - 44px) / 2);
 }
 
 
