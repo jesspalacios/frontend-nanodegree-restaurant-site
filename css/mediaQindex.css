@@ -1,0 +1,65 @@
+@media screen and (max-width: 1085px) {
+    .filter-options {
+        height: 93px;
+    }
+    .filter-options select {
+        display: block;
+        width: calc(100% - 20px);
+    }
+    #restaurants-list {
+        margin-top: 194px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body#index.inside section#restaurant-content {
+        width: 100%;
+    }
+    #index section#map-container {
+        width: 100%;
+        top: 80px;
+        position: relative;
+        height: 360px;
+    }
+    #restaurants-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 80px;
+    }
+    #restaurants-list li {
+        width: 269px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    body.inside#index #footer {
+        width: calc(100% - 50px);
+    }
+    .filter-options {
+        top: 80px;
+        height: 54px;
+        background: #C2EBD2;
+        position: relative;
+        width: 100%;
+    }
+    .filter-options select {
+        background-color: #2F8D7C;
+        display: block;
+    }
+    nav h1 {
+        padding-top: 19px;
+    }
+    nav h1 a {
+        font-size: 20pt;
+        letter-spacing: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .filter-options {
+        height: 96px;
+    }
+    nav h1 a {
+        font-size: 15pt;
+    }
+}

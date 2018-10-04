@@ -1,0 +1,41 @@
+@media screen and (max-width: 750px) {
+  .inside #map-container {
+    width: 100%;
+    position: relative;
+    height: 360px;
+    top: 131px;
+  }
+  
+  #restaurant-container {
+    width: 100%;
+  }
+  #restaurant-card {
+    padding-left: calc((10%)/2);
+  }
+  #reviews-container {
+    width: 100%;
+    padding: 30px 40px 80px 40px;
+  }
+  #reviews-list {
+    width: 100%;
+  }
+  #breadcrumb{
+    width: 100%;
+  }
+  .inside #footer{
+    width: calc(100% - 50px);
+  }
+  nav h1 {
+    padding-top: 19px;
+  }
+  nav h1 a {
+    font-size: 20pt;
+    letter-spacing: 10px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  nav h1 a {
+    font-size: 15pt;
+  }
+}

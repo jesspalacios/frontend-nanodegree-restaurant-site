@@ -10,7 +10,11 @@
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     <!-- Main CSS file -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mediaQindex.css">
+    <link rel="stylesheet" href="css/mediaQrestaurant.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
     <title>Restaurant Info</title>
 </head>
 
@@ -33,16 +37,19 @@
     <!-- Beginning main -->
     <main id="maincontent">
         <!-- Beginning map -->
-        <section id="map-container">
-            <div id="map"></div>
+        <section id="map-container" tabindex="3">
+            <div id="map" role="application" aria-label="leaflet map of restaurants"></div>
         </section>
         <!-- End map -->
 
         <!-- Beginning restaurant -->
-        <section id="restaurant-container">
-            <h1 id="restaurant-name"></h1>
-            <img id="restaurant-img">
-            <p id="restaurant-cuisine"></p>
+        <section id="restaurant-container" tabindex="4">
+            <h2 id="restaurant-name">
+            </h2>
+            <div id="restaurant-card">
+                <img id="restaurant-img">
+                <p id="restaurant-cuisine"></p>
+            </div>
             <p id="restaurant-address"></p>
             <table id="restaurant-hours"></table>
         </section>
@@ -58,7 +65,7 @@
 
     <!-- Beginning footer -->
     <footer id="footer">
-        Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+        Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
     <!-- End footer -->
 
@@ -68,6 +75,7 @@
     <script type="text/javascript" src="js/dbhelper.js"></script>
     <!-- Main javascript file -->
     <script type="text/javascript" src="js/restaurant_info.js"></script>
+
     <!-- Google Maps -->
     <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script> -->
     <!-- End scripts -->
