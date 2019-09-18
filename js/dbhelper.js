@@ -10,7 +10,7 @@ class DBHelper {
     static get DATABASE_URL() {
         /*const port = 8012 // Change this to your server port
         return `http://localhost:${port}/data/restaurants.json`;*/
-        return `https://mzlovelyj.github.io/frontend-nanodegree-restaurant-site/data/restaurants.json`;
+        return `https://jesspalacios.github.io/frontend-nanodegree-restaurant-site/data/restaurants.json`;
     }
 
     /**
@@ -153,7 +153,7 @@ class DBHelper {
      */
     static imageUrlForRestaurant(restaurant) {
         //return (`/img/${restaurant.photograph}`);
-        return (`https://mzlovelyj.github.io/frontend-nanodegree-restaurant-site/img/${restaurant.photograph}`);
+        return (`https://jesspalacios.github.io/frontend-nanodegree-restaurant-site/img/${restaurant.photograph}`);
 
     }
 
